@@ -10,7 +10,7 @@ $dbname = "pgd-it";
 $conn = mysqli_connect($servername, $username, $password, $dbname);
 
 $data = mysqli_query($conn, "SELECT `ID No.`,`Name`,`Phone`,`Department`,`Mail Address`,`Address` FROM `ju-13`");
-echo "<center><table border=1>";
+echo "<center><table border=1> <th>ID</th><th>Name</th> <th>Phone</th><th>Department</th><th>Mail Address</th><th>Address</th>";
 while ($row = mysqli_fetch_assoc($data)) {
     echo "<tr>";
     echo "<td>" . $row['ID No.'] . "</td>" .
